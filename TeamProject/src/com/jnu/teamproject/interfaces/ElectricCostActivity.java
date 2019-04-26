@@ -1,5 +1,4 @@
-package csp;
-import java.awt.BorderLayout;
+package com.jnu.teamproject.interfaces;
 import java.awt.EventQueue;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -9,12 +8,15 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 public class ElectricCostActivity extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JFrame self;
 	private JPanel contentPane;
 	private JTable table;

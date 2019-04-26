@@ -1,5 +1,5 @@
-package csp;
-import java.awt.BorderLayout;
+package com.jnu.teamproject.interfaces;
+
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,12 +8,14 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 public class ChangeRoomDialog extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private ChangeRoomDialog self;
 	private JPanel contentPane;
 	private JTextField textField;

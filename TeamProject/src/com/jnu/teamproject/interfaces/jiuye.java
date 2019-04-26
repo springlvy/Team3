@@ -1,4 +1,4 @@
-package csp;
+package com.jnu.teamproject.interfaces;
 
 import java.awt.Desktop;
 import java.awt.EventQueue;

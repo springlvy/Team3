@@ -1,9 +1,11 @@
-package csp;
+package com.jnu.teamproject.junit;
 
 import static org.junit.Assert.*;
 
+
 import org.junit.Test;
-import csp.Login;
+
+import com.jnu.teamproject.interfaces.*;
 
 public class LoginTest {
 
@@ -18,7 +20,6 @@ public class LoginTest {
 		String password=login.getPassword();
 		//System.out.println(password);
 		assertTrue(username.equals("2016052382")&&password.equals("123456"));
-
 	}
 
 }

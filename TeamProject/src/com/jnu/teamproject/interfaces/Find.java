@@ -1,4 +1,4 @@
-package csp;
+package com.jnu.teamproject.interfaces;
 import java.awt.EventQueue;
 import java.awt.Font;
 
