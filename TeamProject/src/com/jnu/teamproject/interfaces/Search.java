@@ -48,6 +48,7 @@ public class Search extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 352);
 		contentPane = new JPanel();
+		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -65,20 +66,12 @@ public class Search extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		panel.add(lblNewLabel);
-	//	lblNewLabel.setIcon(new ImageIcon(Search.class.getResource("/images/title.png")));
+		lblNewLabel.setIcon(new ImageIcon("images/title.png"));
 		
 		textField = new JTextField();
 		textField.setBounds(50, 99, 231, 33);
 		contentPane.add(textField);
 		textField.setColumns(10);
-		
-		JButton btnNewButton = new JButton("\u641C\u7D22");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnNewButton.setBounds(304, 99, 57, 33);
-		contentPane.add(btnNewButton);
 		
 		JLabel label = new JLabel("\u63A8\u8350\u641C\u7D22");
 		label.setForeground(Color.RED);
@@ -87,17 +80,18 @@ public class Search extends JFrame {
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("\u6700\u65B0\u901A\u77E5");
-		label_1.setFont(new Font("宋体", Font.PLAIN, 18));
+		label_1.setBackground(Color.GRAY);
+		label_1.setFont(new Font("宋体", Font.PLAIN, 16));
 		label_1.setBounds(66, 188, 77, 35);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("\u70ED\u95E8\u70B9\u51FB");
-		label_2.setFont(new Font("宋体", Font.PLAIN, 18));
+		label_2.setFont(new Font("宋体", Font.PLAIN, 16));
 		label_2.setBounds(175, 188, 77, 35);
 		contentPane.add(label_2);
 		
 		JLabel label_3 = new JLabel("\u5B9E\u65F6\u65B0\u95FB");
-		label_3.setFont(new Font("宋体", Font.PLAIN, 18));
+		label_3.setFont(new Font("宋体", Font.PLAIN, 16));
 		label_3.setBounds(284, 188, 77, 35);
 		contentPane.add(label_3);
 		
@@ -112,5 +106,14 @@ public class Search extends JFrame {
 		});
 		button.setBounds(10, 269, 93, 23);
 		contentPane.add(button);
+		
+		JButton btnNewButton = new JButton("\u641C\u7D22");
+		btnNewButton.setFont(new Font("宋体", Font.PLAIN, 18));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(294, 99, 77, 33);
+		contentPane.add(btnNewButton);
 	}
 }
