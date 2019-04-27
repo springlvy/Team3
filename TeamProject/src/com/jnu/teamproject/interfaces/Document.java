@@ -17,9 +17,9 @@ import javax.swing.JPopupMenu;
 import java.awt.Component;
 import javax.swing.JMenu;
 
-public class DocDemo extends JFrame {
+public class Document extends JFrame {
 	
-	public static DocDemo docDemo = new DocDemo();
+	public static Document docDemo = new Document();
 	private JPanel contentPane;
 
 	/**
@@ -41,7 +41,7 @@ public class DocDemo extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public DocDemo() {
+	public Document() {
 		setTitle("\u6587\u6863\u6A21\u677F\u7BA1\u7406");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 635, 475);
@@ -54,7 +54,7 @@ public class DocDemo extends JFrame {
 		button.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				Qingjia qingjia = new Qingjia();
+				Leave qingjia = new Leave();
 				qingjia.setVisible(true);
 			}
 		});

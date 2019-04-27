@@ -1,5 +1,4 @@
 package com.jnu.teamproject.interfaces;
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -7,14 +6,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextField;
 import javax.swing.ImageIcon;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class MainActivity extends JFrame {
+public class Main extends JFrame {
 	private JFrame frame;
 	private JPanel contentPane;
 
@@ -25,7 +21,7 @@ public class MainActivity extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JFrame frame1=new MainActivity();
+					JFrame frame1=new Main();
 					frame1.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +33,7 @@ public class MainActivity extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public MainActivity() {
+	public Main() {
 		frame=this;
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -88,7 +84,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				Find findGrade=new Find();
+				GradeSearch findGrade=new GradeSearch();
 				findGrade.frame.setVisible(true);
 			}
 		});
@@ -100,7 +96,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				Watch watchFangAn=new Watch();
+				TrainScheme watchFangAn=new TrainScheme();
 				watchFangAn.frame.setVisible(true);
 			}
 		});
@@ -112,7 +108,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				List XuanKe = new List();
+				Course XuanKe = new Course();
 				XuanKe.frame.setVisible(true);
 			}
 		});
@@ -128,7 +124,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				Csp3 inform=new Csp3();
+				Notification inform=new Notification();
 				inform.setVisible(true);
 			}
 		});
@@ -148,7 +144,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				jiuye JiuYe=new jiuye();
+				Employment JiuYe=new Employment();
 				JiuYe.setVisible(true);
 			}
 		});
@@ -168,7 +164,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				ElectricCostActivity waterPage=new ElectricCostActivity();
+				ElectricityCost waterPage=new ElectricityCost();
 				waterPage.setVisible(true);
 			}
 		});
@@ -180,7 +176,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				XiaoYuanKaActivity xiaoyuanka=new XiaoYuanKaActivity();
+				SchoolCard xiaoyuanka=new SchoolCard();
 				xiaoyuanka.setVisible(true);
 			}
 		});
@@ -196,7 +192,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				ForumActivity activity=new ForumActivity();
+				Forum activity=new Forum();
 				activity.setVisible(true);
 			}
 		});
@@ -212,11 +208,11 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				Info info = new Info();
+				Information info = new Information();
 				info.setVisible(true);
 			}
 		});
-		btnNewButton_1.setIcon(new ImageIcon("images/touxiang.jpg"));
+		btnNewButton_1.setIcon(new ImageIcon("images/avtar.jpg"));
 		btnNewButton_1.setBounds(36, 31, 111, 44);
 		contentPane.add(btnNewButton_1);
 		
@@ -245,7 +241,7 @@ public class MainActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				Qingjia qingjia = new Qingjia();
+				Leave qingjia = new Leave();
 				qingjia.setVisible(true);
 			}
 		});

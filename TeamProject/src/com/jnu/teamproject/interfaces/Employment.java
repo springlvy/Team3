@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
-public class jiuye extends JFrame {
+public class Employment extends JFrame {
 
 	private JPanel contentPane;
 
@@ -28,7 +28,7 @@ public class jiuye extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					jiuye frame = new jiuye();
+					Employment frame = new Employment();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class jiuye extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public jiuye() {
+	public Employment() {
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 637, 511);
@@ -148,13 +148,13 @@ public class jiuye extends JFrame {
 		contentPane.add(btnNewButton_4);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("images/logo-index.jpg"));
+		lblNewLabel.setIcon(new ImageIcon("images/employment_5.jpg"));
 		
 		lblNewLabel.setBounds(10, 10, 532, 58);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon("images/a.jpg"));
+		lblNewLabel_1.setIcon(new ImageIcon("images/employment_4.jpg"));
 		lblNewLabel_1.setBounds(0, 130, 624, 228);
 		contentPane.add(lblNewLabel_1);
 		
@@ -174,7 +174,7 @@ public class jiuye extends JFrame {
 				}
 			}
 		});
-		lblNewLabel_2.setIcon(new ImageIcon("images/1.jpg"));
+		lblNewLabel_2.setIcon(new ImageIcon("images/employment_1.jpg"));
 		lblNewLabel_2.setBounds(10, 388, 190, 41);
 		contentPane.add(lblNewLabel_2);
 		
@@ -194,7 +194,7 @@ public class jiuye extends JFrame {
 				}
 			}
 		});
-		lblNewLabel_3.setIcon(new ImageIcon("images/2.jpg"));
+		lblNewLabel_3.setIcon(new ImageIcon("images/employment_2.jpg"));
 		lblNewLabel_3.setBounds(210, 388, 190, 41);
 		contentPane.add(lblNewLabel_3);
 		
@@ -214,7 +214,7 @@ public class jiuye extends JFrame {
 				}
 			}
 		});
-		lblNewLabel_4.setIcon(new ImageIcon("images/3.jpg"));
+		lblNewLabel_4.setIcon(new ImageIcon("images/employment_3.jpg"));
 		lblNewLabel_4.setBounds(421, 385, 181, 46);
 		contentPane.add(lblNewLabel_4);
 		

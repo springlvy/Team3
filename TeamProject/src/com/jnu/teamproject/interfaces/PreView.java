@@ -15,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.SwingConstants;
 
-public class Yulan extends JDialog {
+public class PreView extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -24,7 +24,7 @@ public class Yulan extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			Yulan dialog = new Yulan();
+			PreView dialog = new PreView();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -35,14 +35,14 @@ public class Yulan extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public Yulan() {
+	public PreView() {
 		setTitle("\u9884\u89C8");
 		setBounds(100, 100, 829, 773);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
 		JLabel lblNewLabel = new JLabel(" ");
-		lblNewLabel.setIcon(new ImageIcon("images/dayin.png"));
+		lblNewLabel.setIcon(new ImageIcon("images/preview.png"));
 		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
 		gl_contentPanel.setHorizontalGroup(
 			gl_contentPanel.createParallelGroup(Alignment.TRAILING)

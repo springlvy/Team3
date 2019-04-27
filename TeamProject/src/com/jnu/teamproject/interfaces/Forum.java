@@ -12,8 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class ForumActivity extends JFrame {
-	private ForumActivity self;
+public class Forum extends JFrame {
+	private Forum self;
 	private JPanel contentPane;
 	
 	/**
@@ -23,7 +23,7 @@ public class ForumActivity extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ForumActivity frame = new ForumActivity();
+					Forum frame = new Forum();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -35,7 +35,7 @@ public class ForumActivity extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ForumActivity() {
+	public Forum() {
 		self=this;
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +83,7 @@ public class ForumActivity extends JFrame {
 		contentPane.add(label_4);
 		
 		JButton btnNewButton = new JButton("New button");
-		btnNewButton.setIcon(new ImageIcon("images/forum.PNG"));
+		btnNewButton.setIcon(new ImageIcon("images/forum.png"));
 		btnNewButton.setBounds(36, 128, 554, 314);
 		contentPane.add(btnNewButton);
 		
@@ -92,7 +92,7 @@ public class ForumActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

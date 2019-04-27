@@ -12,7 +12,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class ElectricCostActivity extends JFrame {
+public class ElectricityCost extends JFrame {
 	/**
 	 * 
 	 */
@@ -30,7 +30,7 @@ public class ElectricCostActivity extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ElectricCostActivity frame = new ElectricCostActivity();
+					ElectricityCost frame = new ElectricityCost();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,7 +42,7 @@ public class ElectricCostActivity extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ElectricCostActivity() {
+	public ElectricityCost() {
 		self=this;
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -178,7 +178,7 @@ public class ElectricCostActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

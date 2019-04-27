@@ -14,7 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
 
-public class Watch {
+public class TrainScheme {
 
 	JFrame frame;
 	private JTextField textField;
@@ -26,7 +26,7 @@ public class Watch {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Watch window = new Watch();
+					TrainScheme window = new TrainScheme();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -38,7 +38,7 @@ public class Watch {
 	/**
 	 * Create the application.
 	 */
-	public Watch() {
+	public TrainScheme() {
 		initialize();
 	}
 
@@ -92,7 +92,7 @@ public class Watch {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});
@@ -100,7 +100,7 @@ public class Watch {
 		frame.getContentPane().add(button_1);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("images/peiyangfangan.png"));
+		lblNewLabel.setIcon(new ImageIcon("images/trainscheme.png"));
 		lblNewLabel.setBounds(39, 165, 547, 190);
 		frame.getContentPane().add(lblNewLabel);
 	}

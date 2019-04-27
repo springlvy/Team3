@@ -18,7 +18,7 @@ import javax.swing.JSeparator;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class Info extends JFrame {
+public class Information extends JFrame {
 
 	private JFrame self;
 	private JPanel contentPane;
@@ -61,7 +61,7 @@ public class Info extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Info frame = new Info();
+					Information frame = new Information();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -73,7 +73,7 @@ public class Info extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Info() {
+	public Information() {
 		self=this;
 		setTitle("\u4E2A\u4EBA\u4FE1\u606F\u7BA1\u7406");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +83,7 @@ public class Info extends JFrame {
 		setContentPane(contentPane);
 		
 		JButton btnNewButton = new JButton("\u5934\u50CF");
-		btnNewButton.setIcon(new ImageIcon("images/touxiang.jpg"));
+		btnNewButton.setIcon(new ImageIcon("images/avtar.jpg"));
 		btnNewButton.setBounds(15, 34, 152, 188);
 		
 		JLabel lblNewLabel = new JLabel("\u59D3\u540D");
@@ -276,7 +276,7 @@ public class Info extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

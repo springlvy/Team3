@@ -21,7 +21,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 
-public class List {
+public class Course {
 
 	JFrame frame;
 	private JTable table;
@@ -46,7 +46,7 @@ public class List {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					List window = new List();
+					Course window = new Course();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -58,7 +58,7 @@ public class List {
 	/**
 	 * Create the application.
 	 */
-	public List() {
+	public Course() {
 		initialize();
 	}
 
@@ -176,7 +176,7 @@ public class List {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

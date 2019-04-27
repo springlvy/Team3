@@ -36,9 +36,9 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.SystemColor;
 
-public class Qingjia extends JFrame {
+public class Leave extends JFrame {
 
-	private static Qingjia qingjia = new Qingjia();
+	private static Leave qingjia = new Leave();
 	private JPanel contentPane;
 	private JTextField textField_1;
 	private final Action action = new SwingAction();
@@ -62,7 +62,7 @@ public class Qingjia extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Qingjia() {
+	public Leave() {
 		setTitle("\u8BF7\u5047\u6761");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 616, 462);
@@ -160,7 +160,7 @@ public class Qingjia extends JFrame {
 		JButton button = new JButton("\u9884\u89C8");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Yulan yulan = new Yulan();
+				PreView yulan = new PreView();
 				yulan.setVisible(true);
 			}
 		});

@@ -92,7 +92,7 @@ public class Login {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-			    MainActivity f2 = new MainActivity();
+			    Main f2 = new Main();
 			    f2.setVisible(true);
 			   // frame.setVisible(false);
 			}

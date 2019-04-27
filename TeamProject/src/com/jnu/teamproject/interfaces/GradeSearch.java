@@ -22,7 +22,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Find {
+public class GradeSearch {
 
 	JFrame frame;
 	private JTextField textField_1;
@@ -34,7 +34,7 @@ public class Find {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Find window = new Find();
+					GradeSearch window = new GradeSearch();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -46,7 +46,7 @@ public class Find {
 	/**
 	 * Create the application.
 	 */
-	public Find() {
+	public GradeSearch() {
 		initialize();
 	}
 
@@ -115,7 +115,7 @@ public class Find {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				frame.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

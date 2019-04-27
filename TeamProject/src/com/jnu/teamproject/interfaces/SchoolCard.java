@@ -15,7 +15,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class XiaoYuanKaActivity extends JFrame {
+public class SchoolCard extends JFrame {
 	private JFrame self;
 	private JPanel contentPane;
 	private JTable table;
@@ -28,7 +28,7 @@ public class XiaoYuanKaActivity extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					XiaoYuanKaActivity frame = new XiaoYuanKaActivity();
+					SchoolCard frame = new SchoolCard();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class XiaoYuanKaActivity extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public XiaoYuanKaActivity() {
+	public SchoolCard() {
 		self=this;
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -152,7 +152,7 @@ public class XiaoYuanKaActivity extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});

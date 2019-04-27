@@ -106,7 +106,7 @@ public class Search extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main = new MainActivity();
+				Main main = new Main();
 				main.setVisible(true);
 			}
 		});

@@ -1,24 +1,19 @@
 package com.jnu.teamproject.interfaces;
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JToggleButton;
-import javax.swing.JToolBar;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import javax.swing.JEditorPane;
 import javax.swing.ImageIcon;
 
-public class Csp3 extends JFrame {
+public class Notification extends JFrame {
 	private JFrame self;
 	private JPanel contentPane;
 
@@ -29,7 +24,7 @@ public class Csp3 extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Csp3 frame = new Csp3();
+					Notification frame = new Notification();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -41,7 +36,7 @@ public class Csp3 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Csp3() {
+	public Notification() {
 		self=this;
 		setTitle("\u67E5\u770B\u901A\u77E5\u65B0\u95FB");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,7 +57,7 @@ public class Csp3 extends JFrame {
 		newspanel.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("New label");
-		lblNewLabel_1.setIcon(new ImageIcon("images/0QN~Q_F4{D_}V8CDJI~ZML3.png"));
+		lblNewLabel_1.setIcon(new ImageIcon("images/notification.png"));
 		lblNewLabel_1.setBounds(0, 0, 613, 444);
 		newspanel.add(lblNewLabel_1);
 		
@@ -142,7 +137,7 @@ public class Csp3 extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				self.setVisible(false);
-				MainActivity main=new MainActivity();
+				Main main=new Main();
 				main.setVisible(true);
 			}
 		});
