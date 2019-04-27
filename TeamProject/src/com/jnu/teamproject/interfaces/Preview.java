@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class PreView extends JDialog {
+public class Preview extends JDialog {
 
 	private final JPanel contentPanel = new JPanel();
 
@@ -24,7 +24,7 @@ public class PreView extends JDialog {
 	 */
 	public static void main(String[] args) {
 		try {
-			PreView dialog = new PreView();
+			Preview dialog = new Preview();
 			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 			dialog.setVisible(true);
 		} catch (Exception e) {
@@ -35,7 +35,7 @@ public class PreView extends JDialog {
 	/**
 	 * Create the dialog.
 	 */
-	public PreView() {
+	public Preview() {
 		setTitle("\u9884\u89C8");
 		setBounds(100, 100, 829, 773);
 		getContentPane().setLayout(new BorderLayout());

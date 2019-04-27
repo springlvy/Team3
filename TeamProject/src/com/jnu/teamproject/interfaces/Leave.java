@@ -153,7 +153,7 @@ public class Leave extends JFrame {
 		button.setFont(new Font("ËÎÌו", Font.BOLD, 20));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PreView yulan = new PreView();
+				Preview yulan = new Preview();
 				yulan.setVisible(true);
 			}
 		});
