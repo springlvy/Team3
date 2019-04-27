@@ -240,7 +240,7 @@ public class Main extends JFrame {
 		button_11.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				
+				frame.setVisible(false);
 				Leave qingjia = new Leave();
 				qingjia.setVisible(true);
 			}

@@ -21,11 +21,16 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.JSpinner;
 
 public class GradeSearch {
 
 	JFrame frame;
 	private JTextField textField_1;
+	private JTable table;
+	private JTable table_1;
 
 	/**
 	 * Launch the application.
@@ -84,11 +89,6 @@ public class GradeSearch {
 		label_2.setBounds(486, 13, 72, 18);
 		frame.getContentPane().add(label_2);
 		
-		JButton button = new JButton("\u6309\u5B66\u671F\u67E5\u6210\u7EE9");
-		button.setFont(new Font("ËÎÌו", Font.BOLD, 15));
-		button.setBounds(30, 149, 140, 52);
-		frame.getContentPane().add(button);
-		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(341, 192, -40, -12);
 		frame.getContentPane().add(separator);
@@ -96,11 +96,6 @@ public class GradeSearch {
 		JList list = new JList();
 		list.setBounds(243, 225, 103, -64);
 		frame.getContentPane().add(list);
-		
-		JButton btnNewButton = new JButton("\u67E5\u770B\u6700\u597D\u6210\u7EE9");
-		btnNewButton.setFont(new Font("ËÎÌו", Font.BOLD, 15));
-		btnNewButton.setBounds(30, 225, 140, 52);
-		frame.getContentPane().add(btnNewButton);
 		frame.setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		frame.setBounds(100, 100, 637, 511);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -121,5 +116,48 @@ public class GradeSearch {
 		});
 		button_1.setBounds(30, 348, 113, 27);
 		frame.getContentPane().add(button_1);
+		
+		table = new JTable();
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"\u8BFE\u7A0B\u540D", "\u5B66\u5206", "\u6210\u7EE9", "\u7EE9\u70B9"},
+				{"\u8BED\u6587", "3", "85", "4.3"},
+				{"\u9A6C\u514B\u601D\u4E3B\u4E49\u54F2\u5B66\u539F\u7406", "3", "75", "3.7"},
+				{"", null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{"", "", null, ""},
+			},
+			new String[] {
+				"New column", "New column", "New column", "New column"
+			}
+		));
+		table.setBounds(14, 138, 576, 160);
+		frame.getContentPane().add(table);
+		
+		table_1 = new JTable();
+		table_1.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"\u603B\u7EE9\u70B9", "3"},
+			},
+			new String[] {
+				"New column", "New column"
+			}
+		));
+		table_1.setBounds(14, 311, 287, 18);
+		frame.getContentPane().add(table_1);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"\u7B2C\u4E00\u5B66\u671F", "\u7B2C\u4E8C\u5B66\u671F"}));
+		comboBox.setBounds(169, 101, 95, 24);
+		frame.getContentPane().add(comboBox);
+		
+		JComboBox comboBox_1 = new JComboBox();
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"\u7B2C\u4E00\u5B66\u5E74", "\u7B2C\u4E8C\u5B66\u5E74", "\u7B2C\u4E09\u5B66\u5E74", "\u7B2C\u56DB\u5B66\u5E74"}));
+		comboBox_1.setBounds(34, 101, 95, 24);
+		frame.getContentPane().add(comboBox_1);
 	}
 }

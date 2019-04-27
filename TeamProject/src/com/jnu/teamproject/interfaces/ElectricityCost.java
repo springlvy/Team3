@@ -11,6 +11,9 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.border.LineBorder;
+import java.awt.Color;
+import java.awt.Font;
 
 public class ElectricityCost extends JFrame {
 	/**
@@ -53,14 +56,18 @@ public class ElectricityCost extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("\u9648\u707F\u6770");
+		lblNewLabel.setFont(new Font("ι»‘δ½“", Font.PLAIN, 14));
+		lblNewLabel.setForeground(new Color(0, 0, 0));
 		lblNewLabel.setBounds(170, 40, 54, 15);
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("\u667A\u80FD\u5DE5\u7A0B\u4E0E\u79D1\u5B66\u5B66\u9662");
-		lblNewLabel_1.setBounds(170, 61, 123, 15);
+		lblNewLabel_1.setFont(new Font("ι»‘δ½“", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(170, 61, 182, 15);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("\u6CE8\u9500");
+		lblNewLabel_2.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		lblNewLabel_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -73,31 +80,37 @@ public class ElectricityCost extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton button = new JButton("\u641C  \u7D22");
+		button.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		button.setBounds(463, 61, 77, 23);
 		contentPane.add(button);
 		
 		JLabel label_3 = new JLabel("\u5B66\u751F\u751F\u6D3B");
-		label_3.setBounds(59, 103, 54, 15);
+		label_3.setFont(new Font("ι»‘δ½“", Font.PLAIN, 14));
+		label_3.setBounds(59, 103, 70, 15);
 		contentPane.add(label_3);
 		
 		JButton btnNewButton_1 = new JButton("New button");
-		btnNewButton_1.setIcon(new ImageIcon("images/touxiang.jpg"));
+		btnNewButton_1.setIcon(new ImageIcon("images/avtar.jpg"));
 		btnNewButton_1.setBounds(36, 31, 111, 44);
 		contentPane.add(btnNewButton_1);
 		
 		JLabel label_4 = new JLabel("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
-		label_4.setBounds(123, 103, 488, 15);
+		label_4.setBounds(124, 103, 487, 15);
 		contentPane.add(label_4);
 		
 		JLabel label = new JLabel("\u5BBF\u820D\u53F7\uFF1A3313");
+		label.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		label.setBounds(59, 128, 91, 15);
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("\u5269\u4F59\u7528\u7535\u91CF\uFF1A156.31\u5EA6");
+		label_1.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		label_1.setBounds(227, 128, 136, 15);
 		contentPane.add(label_1);
 		
 		JButton button_1 = new JButton("\u91CD\u65B0\u7ED1\u5B9A");
+		button_1.setFont(new Font("ι»‘δ½“", Font.BOLD, 14));
+		button_1.setBackground(new Color(224, 255, 255));
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -105,14 +118,17 @@ public class ElectricityCost extends JFrame {
 				dialog.setVisible(true);
 			}
 		});
-		button_1.setBounds(447, 124, 93, 23);
+		button_1.setBounds(447, 124, 111, 23);
 		contentPane.add(button_1);
 		
 		JLabel label_2 = new JLabel("\u7528\u7535\u60C5\u51B5\uFF1A");
+		label_2.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		label_2.setBounds(59, 153, 70, 15);
 		contentPane.add(label_2);
 		
 		table = new JTable();
+		table.setBorder(new LineBorder(new Color(0, 0, 0)));
+		table.setFont(new Font("ΊΪΜε", Font.PLAIN, 12));
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 				{"\u65E5\u671F", "\u7528\u7535\u91CF\uFF08\u5EA6\uFF09", "\u7528\u7535\u91D1\u989D\uFF08\u5143\uFF09", "\u8BFB\u6570", "\u6708\u6BD4\u4F8B\uFF08%\uFF09"},
@@ -131,10 +147,13 @@ public class ElectricityCost extends JFrame {
 		contentPane.add(table);
 		
 		JLabel label_5 = new JLabel("\u5F53\u524D\u8868\u4FE1\u606F\uFF1A");
+		label_5.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		label_5.setBounds(59, 300, 88, 15);
 		contentPane.add(label_5);
 		
 		table_1 = new JTable();
+		table_1.setBorder(new LineBorder(new Color(0, 0, 0)));
+		table_1.setFont(new Font("ΊΪΜε", Font.PLAIN, 12));
 		table_1.setModel(new DefaultTableModel(
 			new Object[][] {
 				{"\u8868\u53F7\uFF1A000001214337"},
@@ -153,10 +172,13 @@ public class ElectricityCost extends JFrame {
 		contentPane.add(table_1);
 		
 		JLabel label_6 = new JLabel("\u5145\u503C\u60C5\u51B5\uFF1A");
+		label_6.setFont(new Font("ι»‘δ½“", Font.BOLD, 12));
 		label_6.setBounds(282, 300, 70, 15);
 		contentPane.add(label_6);
 		
 		table_2 = new JTable();
+		table_2.setBorder(new LineBorder(new Color(0, 0, 0)));
+		table_2.setFont(new Font("ΊΪΜε", Font.PLAIN, 12));
 		table_2.setModel(new DefaultTableModel(
 			new Object[][] {
 				{"\u65E5\u671F", "\u5185\u5BB9", "\u5145\u503C\u91D1\u989D\uFF08\u5143\uFF09", "\u5145\u503C\u91CF\uFF08\u5EA6\uFF09"},

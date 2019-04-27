@@ -1,6 +1,5 @@
 package com.jnu.teamproject.interfaces;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -8,41 +7,33 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JTextField;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JScrollBar;
-import javax.swing.JSpinner;
 import javax.swing.JLabel;
-import javax.swing.SpinnerNumberModel;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
-import javax.swing.Action;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.SwingConstants;
 import javax.swing.JPopupMenu;
 import java.awt.Component;
 import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JMenu;
 import java.awt.Color;
 import java.awt.Insets;
 import java.awt.Font;
-import javax.swing.ImageIcon;
 import java.awt.SystemColor;
+import javax.swing.UIManager;
+import javax.swing.JEditorPane;
 
 public class Leave extends JFrame {
 
-	private static Leave qingjia = new Leave();
+	
 	private JPanel contentPane;
-	private JTextField textField_1;
-	private final Action action = new SwingAction();
-
+	private JFrame self;
 	/**
 	 * Launch the application.
 	 */
@@ -50,7 +41,7 @@ public class Leave extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					//Qingjia frame = new Qingjia();
+					Leave qingjia = new Leave();
 					qingjia.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -63,47 +54,48 @@ public class Leave extends JFrame {
 	 * Create the frame.
 	 */
 	public Leave() {
+		self=this;
 		setTitle("\u8BF7\u5047\u6761");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 616, 462);
+		setBounds(100, 100, 647, 503);
 		
 		JMenuBar menuBar = new JMenuBar();
-		menuBar.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 32));
+		menuBar.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 36));
 		menuBar.setToolTipText("");
-		menuBar.setMargin(new Insets(3, 3, 0, 3));
-		menuBar.setForeground(Color.GRAY);
-		menuBar.setBackground(Color.GRAY);
+		menuBar.setMargin(new Insets(3, 3, 3, 3));
+		menuBar.setForeground(Color.lightGray);
+		menuBar.setBackground(UIManager.getColor("ColorChooser.background"));
 		setJMenuBar(menuBar);
 		
-		JMenu mnNewMenu = new JMenu("    \u6587\u4EF6   ");
+		JMenu menu = new JMenu("\u4FDD\u5B58\u4E3A");
+		menu.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+		menuBar.add(menu);
+		
+		JMenu mnWord = new JMenu("word");
+		mnWord.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
+		menu.add(mnWord);
+		
+		JMenu mnPdf = new JMenu("pdf");
+		mnPdf.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
+		menu.add(mnPdf);
+		
+		JMenu mnNewMenu = new JMenu("\u53E6\u5B58\u4E3A");
+		mnNewMenu.setFont(new Font("Microsoft YaHei UI", Font.BOLD, 18));
+		mnNewMenu.setHorizontalAlignment(SwingConstants.CENTER);
 		mnNewMenu.setBackground(SystemColor.inactiveCaption);
-		mnNewMenu.setForeground(SystemColor.controlText);
+		mnNewMenu.setForeground(UIManager.getColor("Button.foreground"));
 		menuBar.add(mnNewMenu);
 		
-		JMenu mnNewMenu_1 = new JMenu("\u4FDD\u5B58");
+		JMenu mnNewMenu_1 = new JMenu("word");
+		mnNewMenu_1.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
 		mnNewMenu.add(mnNewMenu_1);
 		
-		JMenuItem mntmNewMenuItem = new JMenuItem("word\u6587\u6863");
-		mnNewMenu_1.add(mntmNewMenuItem);
-		
-		JMenuItem mntmNewMenuItem_1 = new JMenuItem("pdf\u6587\u6863");
-		mnNewMenu_1.add(mntmNewMenuItem_1);
-		
-		JMenu mnNewMenu_2 = new JMenu("\u53E6\u5B58\u4E3A");
+		JMenu mnNewMenu_2 = new JMenu("pdf");
+		mnNewMenu_2.setFont(new Font("Microsoft YaHei UI", Font.PLAIN, 20));
 		mnNewMenu.add(mnNewMenu_2);
-		
-		JMenuItem mntmNewMenuItem_2 = new JMenuItem("word\u6587\u6863");
-		mnNewMenu_2.add(mntmNewMenuItem_2);
-		
-		JMenuItem mntmNewMenuItem_3 = new JMenuItem("pdf\u6587\u6863");
-		mnNewMenu_2.add(mntmNewMenuItem_3);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		
-		textField_1 = new JTextField();
-		textField_1.setHorizontalAlignment(SwingConstants.LEFT);
-		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("\u5E74");
 		
@@ -115,8 +107,10 @@ public class Leave extends JFrame {
 		comboBox.setSelectedIndex(1);
 		
 		JLabel label_1 = new JLabel("\u8BF7\u8F93\u5165\u8BF7\u5047\u539F\u56E0");
+		label_1.setFont(new Font("宋体", Font.PLAIN, 20));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u8BF7\u8F93\u5165\u8BF7\u5047\u65F6\u95F4");
+		lblNewLabel_1.setFont(new Font("宋体", Font.PLAIN, 20));
 		
 		JLabel label_2 = new JLabel("\u6708");
 		
@@ -155,25 +149,40 @@ public class Leave extends JFrame {
 		
 		JLabel label_7 = new JLabel("\u65E5");
 		
-		JLabel lblNewLabel_2 = new JLabel(" ");
-		
 		JButton button = new JButton("\u9884\u89C8");
+		button.setFont(new Font("宋体", Font.BOLD, 20));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PreView yulan = new PreView();
 				yulan.setVisible(true);
 			}
 		});
+		
+		JEditorPane editorPane = new JEditorPane();
+		
+		JButton btnNewButton = new JButton("\u8FD4\u56DE");
+		btnNewButton.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent arg0) {
+				self.setVisible(false);
+				Main main=new Main();
+				main.setVisible(true);
+			}
+		});
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		btnNewButton.setFont(new Font("宋体", Font.BOLD, 20));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
+			gl_contentPane.createParallelGroup(Alignment.TRAILING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(24)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(label_1)
-						.addComponent(textField_1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
-						.addComponent(lblNewLabel_2, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 545, Short.MAX_VALUE)
-						.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+						.addComponent(editorPane, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 545, Short.MAX_VALUE)
+						.addComponent(label_1, Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addPreferredGap(ComponentPlacement.RELATED)
@@ -182,14 +191,14 @@ public class Leave extends JFrame {
 										.addGroup(gl_contentPane.createSequentialGroup()
 											.addComponent(label, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(comboBox, 0, 70, Short.MAX_VALUE)
+											.addComponent(comboBox, 0, 91, Short.MAX_VALUE)
 											.addPreferredGap(ComponentPlacement.RELATED)
 											.addComponent(lblNewLabel)
 											.addGap(8))))
 								.addGroup(gl_contentPane.createSequentialGroup()
 									.addComponent(label_4, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(comboBox_3, 0, 70, Short.MAX_VALUE)
+									.addComponent(comboBox_3, 0, 91, Short.MAX_VALUE)
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addComponent(label_5, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
 									.addGap(8)))
@@ -206,40 +215,41 @@ public class Leave extends JFrame {
 							.addPreferredGap(ComponentPlacement.RELATED)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(comboBox_2, 0, 70, Short.MAX_VALUE)
+									.addComponent(comboBox_2, 0, 68, Short.MAX_VALUE)
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addComponent(label_3, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE))
 								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(comboBox_5, 0, 70, Short.MAX_VALUE)
+									.addComponent(comboBox_5, 0, 68, Short.MAX_VALUE)
 									.addPreferredGap(ComponentPlacement.RELATED)
 									.addComponent(label_7, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)))
-							.addGap(114)
-							.addComponent(button)))
-					.addContainerGap())
+							.addGap(125)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+								.addComponent(button)
+								.addComponent(btnNewButton))))
+					.addGap(78))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(17)
+					.addContainerGap()
 					.addComponent(label_1)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(textField_1, GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+					.addComponent(editorPane, GroupLayout.PREFERRED_SIZE, 150, GroupLayout.PREFERRED_SIZE)
+					.addGap(53)
+					.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 					.addPreferredGap(ComponentPlacement.RELATED)
-					.addComponent(lblNewLabel_2, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(label)
+						.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblNewLabel)
+						.addComponent(comboBox_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_2)
+						.addComponent(comboBox_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(label_3)
+						.addComponent(button))
+					.addGap(41)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(23)
-							.addComponent(lblNewLabel_1, GroupLayout.DEFAULT_SIZE, 21, Short.MAX_VALUE)
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(label)
-								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel)
-								.addComponent(comboBox_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_2)
-								.addComponent(comboBox_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-								.addComponent(label_3))
-							.addGap(48)
 							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 								.addComponent(label_4)
 								.addComponent(comboBox_3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
@@ -250,8 +260,7 @@ public class Leave extends JFrame {
 								.addComponent(label_5))
 							.addGap(17))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addPreferredGap(ComponentPlacement.RELATED)
-							.addComponent(button)
+							.addComponent(btnNewButton)
 							.addContainerGap())))
 		);
 		contentPane.setLayout(gl_contentPane);

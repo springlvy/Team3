@@ -13,11 +13,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.ImageIcon;
+import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
 
 public class TrainScheme {
 
 	JFrame frame;
 	private JTextField textField;
+	private JTable table;
+	private JTable table_1;
 
 	/**
 	 * Launch the application.
@@ -54,21 +58,22 @@ public class TrainScheme {
 		frame.getContentPane().setLayout(null);
 		
 		textField = new JTextField();
-		textField.setColumns(10);
 		textField.setBounds(14, 27, 70, 66);
+		textField.setColumns(10);
 		frame.getContentPane().add(textField);
 		
 		JLabel label = new JLabel("\u7528\u6237\u540D");
-		label.setFont(new Font("宋体", Font.BOLD, 15));
 		label.setBounds(98, 27, 72, 18);
+		label.setFont(new Font("宋体", Font.BOLD, 15));
 		frame.getContentPane().add(label);
 		
 		JLabel label_1 = new JLabel("\u667A\u80FD\u79D1\u5B66\u4E0E\u5DE5\u7A0B\u5B66\u9662");
-		label_1.setFont(new Font("宋体", Font.BOLD, 15));
 		label_1.setBounds(98, 61, 160, 18);
+		label_1.setFont(new Font("宋体", Font.BOLD, 15));
 		frame.getContentPane().add(label_1);
 		
 		JLabel label_2 = new JLabel("\u6CE8\u9500");
+		label_2.setBounds(486, 13, 72, 18);
 		label_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -76,18 +81,18 @@ public class TrainScheme {
 				window.frame.setVisible(true);
 			}
 		});
-		label_2.setBounds(486, 13, 72, 18);
 		frame.getContentPane().add(label_2);
 		
 		JButton button = new JButton("\u8FD4\u56DE");
+		button.setBounds(29, 499, 113, 27);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setBounds(29, 499, 113, 27);
 		frame.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("\u8FD4\u56DE");
+		button_1.setBounds(29, 382, 113, 27);
 		button_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -96,12 +101,34 @@ public class TrainScheme {
 				main.setVisible(true);
 			}
 		});
-		button_1.setBounds(29, 382, 113, 27);
 		frame.getContentPane().add(button_1);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("images/trainscheme.png"));
-		lblNewLabel.setBounds(39, 165, 547, 190);
-		frame.getContentPane().add(lblNewLabel);
+		table = new JTable();
+		table.setBounds(98, 273, 160, -100);
+		frame.getContentPane().add(table);
+		
+		table_1 = new JTable();
+		table_1.setModel(new DefaultTableModel(
+			new Object[][] {
+				{"\u5B66\u4E60\u6A21\u5757", "\u8981\u6C42", "\u5DF2\u4FEE", "\u8FD8\u5DEE"},
+				{"\u603B\u5206", "150", "150", "0"},
+				{"\u5FC5\u4FEE", "75", "75", "0"},
+				{"\u901A\u8BC6\u9009\u4FEE", "20", "20", "0"},
+				{"\u57FA\u7840\u6559\u80B2", "20", "20", "0"},
+				{"\u4E13\u4E1A\u6559\u80B2", "20", "20", "0"},
+				{"\u8DE8\u4E13\u4E1A\u8BFE\u7A0B", "15", "15", "0"},
+				{"\u9009\u4FEE\u5408\u8BA1", "75", "75", "0"},
+			},
+			new String[] {
+				"New column", "New column", "New column", "New column"
+			}
+		));
+		table_1.setBounds(29, 187, 430, 128);
+		frame.getContentPane().add(table_1);
+		
+		JLabel label_3 = new JLabel("\u4EBA\u624D\u57F9\u517B\u65B9\u6848");
+		label_3.setForeground(Color.RED);
+		label_3.setBounds(29, 155, 141, 18);
+		frame.getContentPane().add(label_3);
 	}
 }

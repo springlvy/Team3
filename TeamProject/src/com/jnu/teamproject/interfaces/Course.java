@@ -20,6 +20,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
 public class Course {
 
@@ -29,15 +30,8 @@ public class Course {
 	private JLabel label;
 	private JLabel label_1;
 	private JLabel label_2;
-	private JButton btnNewButton;
-	private JButton button;
-	private JButton button_1;
-	private JButton button_2;
-	private JButton button_3;
-	private JButton button_4;
-	private JButton button_5;
-	private JButton button_6;
 	private JButton button_7;
+	private JLabel label_3;
 
 	/**
 	 * Launch the application.
@@ -73,11 +67,12 @@ public class Course {
 		frame.getContentPane().setLayout(null);
 		
 		table = new JTable();
+		table.setBounds(14, 121, 636, 160);
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
 				{"\u8BFE\u7A0B\u7F16\u53F7", "\u8BFE\u7A0B\u540D", "\u5F00\u8BFE\u5BF9\u8C61", "\u4E0A\u8BFE\u65F6\u95F4", "\u4E0A\u8BFE\u5730\u70B9", "\u8003\u8BD5\u65F6\u95F4"},
-				{null, null, null, null, null, null},
-				{null, null, null, null, null, null},
+				{"20190011", "\u5927\u5B66\u751F\u5FC3\u7406\u5065\u5EB7\u6559\u80B2", "\u4E0D\u9650", "\u672A\u5B9A", "\u672A\u5B9A", "\u672A\u5B9A"},
+				{"", null, null, null, null, null},
 				{null, null, null, null, null, null},
 				{null, null, null, null, null, null},
 				{null, null, null, null, null, null},
@@ -91,27 +86,27 @@ public class Course {
 			}
 		));
 		table.setBorder(new LineBorder(new Color(0, 0, 0)));
-		table.setBounds(14, 121, 605, 160);
 		frame.getContentPane().add(table);
 	
 		
 		JLabel lblNewLabel_2 = new JLabel("\u6CE8\u9500");
 		textField_9 = new JTextField();
-		textField_9.setColumns(10);
 		textField_9.setBounds(14, 27, 70, 66);
+		textField_9.setColumns(10);
 		frame.getContentPane().add(textField_9);
 		
 		label = new JLabel("\u7528\u6237\u540D");
-		label.setFont(new Font("宋体", Font.BOLD, 15));
 		label.setBounds(98, 27, 72, 18);
+		label.setFont(new Font("宋体", Font.BOLD, 15));
 		frame.getContentPane().add(label);
 		
 		label_1 = new JLabel("\u667A\u80FD\u79D1\u5B66\u4E0E\u5DE5\u7A0B\u5B66\u9662");
-		label_1.setFont(new Font("宋体", Font.BOLD, 15));
 		label_1.setBounds(98, 58, 160, 18);
+		label_1.setFont(new Font("宋体", Font.BOLD, 15));
 		frame.getContentPane().add(label_1);
 		
 		label_2 = new JLabel("\u6CE8\u9500");
+		label_2.setBounds(796, 27, 72, 18);
 		label_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -119,59 +114,30 @@ public class Course {
 				window.frame.setVisible(true);
 			}
 		});
-		label_2.setBounds(796, 27, 72, 18);
 		frame.getContentPane().add(label_2);
 		
-		btnNewButton = new JButton("\u9009\u8BFE");
-		btnNewButton.setForeground(new Color(0, 0, 255));
-		btnNewButton.addActionListener(new ActionListener() {
+		button_7 = new JButton("\u9009\u8BFE");
+		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnNewButton.setBounds(637, 263, 96, 18);
-		frame.getContentPane().add(btnNewButton);
-		
-		button = new JButton("\u9009\u8BFE");
-		button.setForeground(Color.BLUE);
-		button.setBounds(637, 247, 96, 18);
-		frame.getContentPane().add(button);
-		
-		button_1 = new JButton("\u9009\u8BFE");
-		button_1.setForeground(Color.BLUE);
-		button_1.setBounds(637, 233, 96, 18);
-		frame.getContentPane().add(button_1);
-		
-		button_2 = new JButton("\u9009\u8BFE");
-		button_2.setForeground(Color.BLUE);
-		button_2.setBounds(637, 216, 96, 18);
-		frame.getContentPane().add(button_2);
-		
-		button_3 = new JButton("\u9009\u8BFE");
-		button_3.setForeground(Color.BLUE);
-		button_3.setBounds(637, 202, 96, 18);
-		frame.getContentPane().add(button_3);
-		
-		button_4 = new JButton("\u9009\u8BFE");
-		button_4.setForeground(Color.BLUE);
-		button_4.setBounds(637, 185, 96, 18);
-		frame.getContentPane().add(button_4);
-		
-		button_5 = new JButton("\u9009\u8BFE");
-		button_5.setForeground(Color.BLUE);
-		button_5.setBounds(637, 171, 96, 18);
-		frame.getContentPane().add(button_5);
-		
-		button_6 = new JButton("\u9009\u8BFE");
-		button_6.setForeground(Color.BLUE);
-		button_6.setBounds(637, 156, 96, 18);
-		frame.getContentPane().add(button_6);
-		
-		button_7 = new JButton("\u9009\u8BFE");
+		button_7.setBounds(664, 138, 96, 18);
+		button_7.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				EnrollmentConfirmation select = new EnrollmentConfirmation();
+				select.frame.setVisible(true);
+			}
+		});
 		button_7.setForeground(Color.BLUE);
-		button_7.setBounds(637, 140, 96, 18);
 		frame.getContentPane().add(button_7);
 		
 		JButton btnNewButton_1 = new JButton("\u8FD4\u56DE");
+		btnNewButton_1.setBounds(29, 499, 113, 27);
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -180,8 +146,20 @@ public class Course {
 				main.setVisible(true);
 			}
 		});
-		btnNewButton_1.setBounds(29, 499, 113, 27);
 		frame.getContentPane().add(btnNewButton_1);
+		
+		label_3 = new JLabel("\u67E5\u770B\u5DF2\u9009\u8BFE\u7A0B");
+		label_3.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				CheckCourse watch = new CheckCourse();
+				watch.frame.setVisible(true);
+			}
+		});
+		label_3.setForeground(SystemColor.textHighlight);
+		label_3.setFont(new Font("宋体", Font.PLAIN, 18));
+		label_3.setBounds(24, 311, 130, 18);
+		frame.getContentPane().add(label_3);
 		
 		
 	}

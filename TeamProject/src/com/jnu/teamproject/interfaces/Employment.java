@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 public class Employment extends JFrame {
 
 	private JPanel contentPane;
+	private JFrame self;
 
 	/**
 	 * Launch the application.
@@ -41,6 +42,7 @@ public class Employment extends JFrame {
 	 * Create the frame.
 	 */
 	public Employment() {
+		self=this;
 		setTitle("\u66A8\u5357\u5927\u5B66\u81EA\u4E3B\u8F6F\u4EF6\u7CFB\u7EDF");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 637, 511);
@@ -218,8 +220,17 @@ public class Employment extends JFrame {
 		lblNewLabel_4.setBounds(421, 385, 181, 46);
 		contentPane.add(lblNewLabel_4);
 		
-		
-	
+		JButton back=new JButton("·µ»Ø");
+		back.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				self.setVisible(false);
+				Main main=new Main();
+				main.setVisible(true);
+			}
+		});
+		back.setBounds(10, 442, 97, 23);
+		contentPane.add(back);
 		
 		
 	}
