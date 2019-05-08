@@ -24,7 +24,7 @@ import freemarker.template.Version;
 
 public class SaveAs {
 	
-	Logger logger = Logger.getLogger(SaveAs.class);
+	static Logger logger = Logger.getLogger(SaveAs.class);
 	
     private static Frame jf;
     private PrintStream jtext;
@@ -72,6 +72,7 @@ public class SaveAs {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
     }
     public static void save_As_PDF(String str[]) throws Exception{
@@ -117,6 +118,7 @@ public class SaveAs {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
         Word2Pdf.doc2pdf(path+".doc",path+".pdf");
     }

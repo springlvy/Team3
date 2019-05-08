@@ -16,7 +16,7 @@ import freemarker.template.Version;
 
 public class Save {
 
-	Logger logger = Logger.getLogger(Save.class);
+	static Logger logger = Logger.getLogger(Save.class);
 	
 	public static void saveWord(String str[]){
         Map<String,Object> dataMap = new HashMap<String, Object>();
@@ -57,6 +57,7 @@ public class Save {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
 	}
 	
@@ -94,6 +95,7 @@ public class Save {
             out.close();
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
         Word2Pdf.doc2pdf("./暨南大学学生请假申请表.doc", "./暨南大学学生请假申请表.pdf");
 	}

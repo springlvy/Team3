@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
 
 public class PrintFile {
 	
-	Logger logger = Logger.getLogger(PrintFile.class);
+	static Logger logger = Logger.getLogger(PrintFile.class);
 	
 	public static void main(String args[]) {
 		printFileAction();
@@ -54,6 +54,7 @@ public class PrintFile {
 	        catch(Exception e) 
 	        { 
 	             e.printStackTrace(); 
+	             logger.error(e.getMessage());
 	        } 
 	    } 
 	}

@@ -16,7 +16,7 @@ import com.aspose.words.SaveFormat;
 
 public class Word2Pdf {
 	
-	Logger logger = Logger.getLogger(Word2Pdf.class);
+	static Logger logger = Logger.getLogger(Word2Pdf.class);
 	
 	public static void main(String[] args) {
        doc2pdf("E:\\暨南大学学生请假申请表.doc","E:\\暨南大学学生请假申请表.pdf");
@@ -47,6 +47,7 @@ public class Word2Pdf {
             result = true;
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }
         return result;
     }
@@ -62,12 +63,14 @@ public class Word2Pdf {
             doc.save(os, SaveFormat.PDF);
         } catch (Exception e) {
             e.printStackTrace();
+            logger.error(e.getMessage());
         }finally{
         	if(os!=null){
         		try {
 					os.close();
 				} catch (IOException e) {
 					e.printStackTrace();
+					logger.error(e.getMessage());
 				}
         	}
         }
