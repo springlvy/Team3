@@ -15,7 +15,7 @@ import javax.print.attribute.HashDocAttributeSet;
 import javax.print.attribute.HashPrintRequestAttributeSet;
 import javax.print.attribute.PrintRequestAttributeSet;
 
-public class PrintFile {
+public class PrintFileTest {
 	public static void main(String args[]) {
 		printFileAction();
 	}

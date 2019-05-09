@@ -11,7 +11,7 @@ import com.aspose.words.Document;
 import com.aspose.words.License;
 import com.aspose.words.SaveFormat;
 
-public class Word2Pdf {
+public class Word2PdfTest {
 	
 	public static void main(String[] args) {
        doc2pdf("E:\\暨南大学学生请假申请表.doc","E:\\暨南大学学生请假申请表.pdf");

@@ -17,13 +17,13 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.Version;
 
-public class FileOpen {
+public class SaveAsTest {
 
     private Frame jf;
     private PrintStream jtext;
 
     public static void main(String[] args) throws Exception {
-        FileOpen hj = new FileOpen();
+        SaveAsTest hj = new SaveAsTest();
         //hj.open();
         //hj.save_As_Word();
         hj.save_As_PDF();
@@ -85,7 +85,9 @@ public class FileOpen {
             Configuration configuration = new Configuration(new Version("2.3.0"));
             configuration.setDefaultEncoding("utf-8");
  
-            configuration.setClassForTemplateLoading(this.getClass(), "doc");
+            //configuration.setClassForTemplateLoading(this.getClass(), "doc");
+            String path_ftl = System.getProperty("user.dir")+"./documents";
+            configuration.setDirectoryForTemplateLoading(new File(path_ftl));
  
             File outFile = new File(path+".doc");
 
@@ -97,7 +99,7 @@ public class FileOpen {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        Word2Pdf.doc2pdf(path+".doc",path+".pdf");
+        Word2PdfTest.doc2pdf(path+".doc",path+".pdf");
     }
     public void open() throws Exception {
         FileDialog fdopen = new FileDialog(jf, "´ò¿ª", FileDialog.LOAD);
