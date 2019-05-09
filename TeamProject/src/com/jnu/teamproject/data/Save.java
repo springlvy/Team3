@@ -56,7 +56,7 @@ public class Save {
             template.process(dataMap, out);
             out.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }
 	}
@@ -94,7 +94,7 @@ public class Save {
             template.process(dataMap, out);
             out.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }
         Word2Pdf.doc2pdf("./暨南大学学生请假申请表.doc", "./暨南大学学生请假申请表.pdf");

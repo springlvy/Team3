@@ -53,7 +53,7 @@ public class PrintFile {
 	        } 
 	        catch(Exception e) 
 	        { 
-	             e.printStackTrace(); 
+	             //e.printStackTrace(); 
 	             logger.error(e.getMessage());
 	        } 
 	    } 

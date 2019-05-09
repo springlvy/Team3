@@ -16,7 +16,7 @@ import java.util.Map;
 
 import org.apache.log4j.Logger;
 
-import com.jnu.teamproject.junit.Word2Pdf;
+import com.jnu.teamproject.junit.Word2PdfTest;
 
 import freemarker.template.Configuration;
 import freemarker.template.Template;
@@ -71,7 +71,7 @@ public class SaveAs {
             template.process(dataMap, out);
             out.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }
     }
@@ -117,10 +117,10 @@ public class SaveAs {
             template.process(dataMap, out);
             out.close();
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }
-        Word2Pdf.doc2pdf(path+".doc",path+".pdf");
+        Word2PdfTest.doc2pdf(path+".doc",path+".pdf");
     }
 
     public void open() throws Exception {

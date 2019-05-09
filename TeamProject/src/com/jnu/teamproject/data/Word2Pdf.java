@@ -46,7 +46,7 @@ public class Word2Pdf {
             asposeLic.setLicense(license);
             result = true;
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }
         return result;
@@ -62,14 +62,14 @@ public class Word2Pdf {
             Document doc = new Document(inPath); // Address是将要被转化的word文档
             doc.save(os, SaveFormat.PDF);
         } catch (Exception e) {
-            e.printStackTrace();
+            //e.printStackTrace();
             logger.error(e.getMessage());
         }finally{
         	if(os!=null){
         		try {
 					os.close();
 				} catch (IOException e) {
-					e.printStackTrace();
+					//e.printStackTrace();
 					logger.error(e.getMessage());
 				}
         	}
