@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="images"/>
+	<classpathentry kind="src" path="documents"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="libs/freemarker.jar"/>
+	<classpathentry kind="lib" path="libs/aspose-words-15.8.0-jdk16.jar"/>
+	<classpathentry kind="lib" path="libs/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="libs/djnativeswing-swt.jar"/>
+	<classpathentry kind="lib" path="libs/djnativeswing.jar"/>
+	<classpathentry kind="lib" path="libs/org.eclipse.swt.win32.win32.x86_64-4.3.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-schemas-4.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/org.apache.poi.xwpf.converter.core-1.0.4.jar"/>
+	<classpathentry kind="lib" path="libs/org.apache.poi.xwpf.converter.xhtml-1.0.5.jar"/>
+	<classpathentry kind="lib" path="libs/poi-ooxml-4.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/poi-4.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/poi-scratchpad-4.1.0.jar"/>
+	<classpathentry kind="lib" path="libs/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="libs/commons-collections4-4.3.jar"/>
+	<classpathentry kind="lib" path="libs/jsoup-1.11.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
